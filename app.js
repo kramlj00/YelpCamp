@@ -1,3 +1,11 @@
+// process.env.NODE_ENV -- environment variable
+// if we are running in dvelopment require dotenv package which is going to take
+// variables defined in .env file and  add them into process.env in my node app
+// so I can access them in this file or any of my other files
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config();
+}
+
 const express = require("express");
 const app = express();
 const path = require("path");
